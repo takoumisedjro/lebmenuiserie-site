@@ -1,0 +1,17 @@
+/* ===================================================
+   LEB Menuiserie — Polices
+   Raleway (titres) + Exo (nav) + Lato (corps)
+   =================================================== */
+
+/* Typographie de base */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+nav, button {
+  font-family: var(--font-nav);
+}
+
+body, p, span, input, textarea, select {
+  font-family: var(--font-body);
+}
