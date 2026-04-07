@@ -26,7 +26,7 @@ export default function RecrutementPage() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-28 pb-16 bg-gradient-to-br from-[var(--background-alt)] to-white border-b border-[var(--border)]">
+      <section className="pt-10 pb-16 bg-gradient-to-br from-[var(--background-alt)] to-white border-b border-[var(--border)]">
         <div className="container-custom fade-in">
           <span className="text-[var(--primary)] font-exo font-semibold text-sm uppercase tracking-widest">
             Rejoignez l'équipe

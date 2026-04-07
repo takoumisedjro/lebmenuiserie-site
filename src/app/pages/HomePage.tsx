@@ -27,54 +27,63 @@ const services = [
     title: 'Portes d\'entrée',
     desc: 'Des portes d\'entrée sécurisées et esthétiques, sur-mesure pour votre habitat.',
     image: 'https://lebmenuiserie.com/wp-content/uploads/2024/10/1.jpg',
+    slug: 'portes-entree',
   },
   {
     icon: <Grid2x2 size={28} />,
     title: 'Fenêtres',
     desc: 'Isolation thermique et acoustique optimale avec nos fenêtres haute performance.',
     image: 'https://lebmenuiserie.com/wp-content/uploads/2026/01/IMG_6158-scaled.jpg',
+    slug: 'fenetres',
   },
   {
     icon: <Fence size={28} />,
     title: 'Portails et clôtures',
     desc: 'Sécurisez et embellissez votre propriété avec nos portails sur-mesure.',
     image: 'https://lebmenuiserie.com/wp-content/uploads/2026/01/IMG_1446-scaled.jpg',
+    slug: 'portails',
   },
   {
     icon: <PanelRight size={28} />,
     title: 'Baies coulissantes',
     desc: 'Agrandissez visuellement vos espaces de vie avec nos baies coulissantes.',
     image: 'https://lebmenuiserie.com/wp-content/uploads/2026/01/2.jpg',
+    slug: 'baies-coulissantes',
   },
   {
     icon: <TreePine size={28} />,
     title: 'Pergolas',
     desc: 'Profitez de votre extérieur toute l\'année avec nos pergolas bioclimatiques.',
     image: 'https://lebmenuiserie.com/wp-content/uploads/2026/01/IMG_6151-scaled.jpg',
+    slug: 'pergolas',
   },
   {
     icon: <Layers size={28} />,
     title: 'Portes de garage',
     desc: 'Sécurité, praticité et design pour vos accès garage.',
     image: 'https://lebmenuiserie.com/wp-content/uploads/2026/01/IMG_1681-scaled.jpg',
+    slug: 'portes-garage',
   },
   {
     icon: <Sun size={28} />,
     title: 'Stores extérieurs',
     desc: 'Protégez-vous du soleil tout en valorisant l\'extérieur de votre bien.',
     image: 'https://lebmenuiserie.com/wp-content/uploads/2024/10/1.jpg',
+    slug: 'stores-exterieurs',
   },
   {
     icon: <SlidersHorizontal size={28} />,
     title: 'Stores intérieurs',
     desc: 'Habillage de fenêtres élégant et fonctionnel pour votre intérieur.',
     image: 'https://lebmenuiserie.com/wp-content/uploads/2026/01/IMG_6158-scaled.jpg',
+    slug: 'stores-interieurs',
   },
   {
     icon: <Bug size={28} />,
     title: 'Moustiquaires',
     desc: 'Profitez de l\'air frais sans les nuisances, solutions sur-mesure.',
     image: 'https://lebmenuiserie.com/wp-content/uploads/2026/01/IMG_1446-scaled.jpg',
+    slug: 'moustiquaires',
   },
 ]
 
@@ -128,7 +137,7 @@ export default function HomePage() {
       />
 
       {/* ── HERO ──────────────────────────────────── */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
+      <section className="relative flex items-center overflow-hidden" style={{ minHeight: 'calc(100vh - var(--header-total-height))' }}>
         {/* Background */}
         <div className="absolute inset-0 z-0">
           <ImageWithFallback
@@ -136,17 +145,13 @@ export default function HomePage() {
             alt="Fenêtres LEB Menuiserie"
             className="w-full h-full object-cover"
             loading="eager"
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/50 to-transparent" />
         </div>
 
-        {/* Promo banner */}
-        <div className="absolute top-16 lg:top-20 left-0 right-0 z-10 bg-[var(--primary)] text-white text-center py-2.5 text-sm font-exo font-semibold tracking-wide">
-          Offre de printemps&nbsp;: <strong className="font-extrabold">-10% sur toutes les Pergolas Bioclimatiques</strong> jusqu'au 17&nbsp;avril
-        </div>
-
         {/* Content */}
-        <div className="container-custom relative z-10 pt-32 pb-16">
+        <div className="container-custom relative z-10 pt-12 pb-16">
           <div className="max-w-2xl fade-in">
             <span className="inline-block text-[var(--primary)] font-exo font-semibold text-sm uppercase tracking-widest mb-4">
               Installateur Conseil depuis 1973
@@ -225,7 +230,7 @@ export default function HomePage() {
             {services.map((service, i) => (
               <ScrollReveal key={service.title} delay={i * 60}>
                 <Link
-                  to="/contact"
+                  to={`/${service.slug}`}
                   className="group flex flex-col rounded-xl overflow-hidden border border-[var(--border)] hover:border-[var(--primary)] hover:shadow-[var(--shadow-lg)] transition-all duration-300"
                 >
                   <div className="img-zoom h-52 overflow-hidden">
@@ -233,6 +238,7 @@ export default function HomePage() {
                       src={service.image}
                       alt={service.title}
                       className="w-full h-full"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                   </div>
                   <div className="p-5 flex flex-col gap-2 flex-1">
@@ -261,6 +267,7 @@ export default function HomePage() {
             src="https://lebmenuiserie.com/wp-content/uploads/2026/01/IMG_6151-scaled.jpg"
             alt="Pergola bioclimatique"
             className="w-full h-full"
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-[var(--primary)]/90" />
         </div>
@@ -294,6 +301,7 @@ export default function HomePage() {
                   src="https://lebmenuiserie.com/wp-content/uploads/2026/01/IMG_1681-scaled.jpg"
                   alt="L'équipe LEB Menuiserie"
                   className="w-full h-80 lg:h-96"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
             </ScrollReveal>
@@ -345,8 +353,8 @@ export default function HomePage() {
               <span className="text-[var(--primary)] font-exo font-semibold text-sm uppercase tracking-widest">
                 Venez nous rencontrer
               </span>
-              <h2 className="font-display font-bold text-3xl sm:text-4xl text-[var(--foreground)] mt-2">
-                Visitez nos SHOWROOMS
+              <h2 className="font-display font-bold text-3xl sm:text-4xl text-[var(--foreground)] mt-2 uppercase">
+                Visitez nos showrooms
               </h2>
             </div>
           </ScrollReveal>

@@ -7,6 +7,9 @@ interface ImageWithFallbackProps {
   alt: string
   className?: string
   loading?: 'lazy' | 'eager'
+  sizes?: string
+  width?: number
+  height?: number
 }
 
 export function ImageWithFallback({
@@ -15,6 +18,9 @@ export function ImageWithFallback({
   alt,
   className,
   loading = 'lazy',
+  sizes,
+  width,
+  height,
 }: ImageWithFallbackProps) {
   const [errored, setErrored] = useState(false)
 
@@ -23,8 +29,12 @@ export function ImageWithFallback({
       src={errored ? fallback : src}
       alt={alt}
       loading={loading}
+      decoding="async"
       onError={() => setErrored(true)}
       className={cn('object-cover', className)}
+      {...(sizes && { sizes })}
+      {...(width && { width })}
+      {...(height && { height })}
     />
   )
 }

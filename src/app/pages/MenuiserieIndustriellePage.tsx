@@ -29,13 +29,14 @@ export default function MenuiserieIndustriellePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-20 min-h-[60vh] flex items-end pb-16 overflow-hidden">
+      <section className="relative min-h-[60vh] flex items-end pb-16 overflow-hidden">
         <div className="absolute inset-0">
           <ImageWithFallback
             src="https://lebmenuiserie.com/wp-content/uploads/2024/10/1.jpg"
             alt="Menuiserie industrielle LEB"
             className="w-full h-full"
             loading="eager"
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
         </div>
@@ -124,7 +125,12 @@ export default function MenuiserieIndustriellePage() {
             {galerie.map((img, i) => (
               <ScrollReveal key={i} delay={i * 80}>
                 <div className="img-zoom rounded-xl overflow-hidden aspect-square shadow-[var(--shadow-sm)]">
-                  <ImageWithFallback src={img} alt={`Réalisation ${i + 1}`} className="w-full h-full" />
+                  <ImageWithFallback
+                    src={img}
+                    alt={`Réalisation ${i + 1}`}
+                    className="w-full h-full"
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  />
                 </div>
               </ScrollReveal>
             ))}

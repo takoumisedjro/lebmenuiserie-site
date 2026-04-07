@@ -17,6 +17,10 @@ export function Footer() {
                 src="https://lebmenuiserie.com/wp-content/uploads/2019/01/logo_LEB.png"
                 alt="LEB Menuiserie"
                 className="h-10 w-auto object-contain"
+                width={160}
+                height={40}
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <p className="text-sm text-white/70 leading-relaxed mb-6">
@@ -28,7 +32,7 @@ export function Footer() {
                 href="https://www.facebook.com/lebmenuiserie"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Facebook LEB Menuiserie"
+                aria-label="LEB Menuiserie sur Facebook"
                 className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-[var(--primary)] transition-colors text-xs font-bold"
               >
                 f
@@ -37,7 +41,7 @@ export function Footer() {
                 href="https://www.instagram.com/lebmenuiserie"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Instagram LEB Menuiserie"
+                aria-label="LEB Menuiserie sur Instagram"
                 className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-[var(--primary)] transition-colors"
               >
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
@@ -56,7 +60,6 @@ export function Footer() {
                 { label: 'Menuiserie industrielle', to: '/menuiserie-industrielle' },
                 { label: 'Recrutement', to: '/recrutement' },
                 { label: 'Contact', to: '/contact' },
-                { label: 'Espace admin', to: '/espace-admin' },
               ].map((link) => (
                 <li key={link.to}>
                   <Link

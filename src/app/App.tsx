@@ -5,6 +5,7 @@ import { Footer } from '@/app/components/Footer'
 import { MobileStickyBar } from '@/app/components/MobileStickyBar'
 
 const HomePage = lazy(() => import('@/app/pages/HomePage'))
+const ServicePage = lazy(() => import('@/app/pages/ServicePage'))
 const MenuiserieIndustriellePage = lazy(() => import('@/app/pages/MenuiserieIndustriellePage'))
 const RecrutementPage = lazy(() => import('@/app/pages/RecrutementPage'))
 const ContactPage = lazy(() => import('@/app/pages/ContactPage'))
@@ -23,7 +24,7 @@ function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Navigation />
-      <main className="pb-16 lg:pb-0">{children}</main>
+      <main style={{ paddingTop: 'var(--header-total-height)' }} className="pb-16 lg:pb-0">{children}</main>
       <Footer />
       <MobileStickyBar />
     </>
@@ -35,11 +36,14 @@ export default function App() {
     <BrowserRouter>
       <Suspense fallback={<PageLoader />}>
         <Routes>
-          {/* Pages publiques avec layout */}
+          {/* Pages fixes — déclarées AVANT /:slug pour ne pas être captées */}
           <Route path="/" element={<Layout><HomePage /></Layout>} />
           <Route path="/menuiserie-industrielle" element={<Layout><MenuiserieIndustriellePage /></Layout>} />
           <Route path="/recrutement" element={<Layout><RecrutementPage /></Layout>} />
           <Route path="/contact" element={<Layout><ContactPage /></Layout>} />
+
+          {/* Pages de services — route dynamique */}
+          <Route path="/:slug" element={<Layout><ServicePage /></Layout>} />
 
           {/* Pages admin sans layout */}
           <Route path="/login" element={<LoginPage />} />

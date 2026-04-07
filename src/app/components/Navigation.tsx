@@ -32,9 +32,15 @@ export function Navigation() {
 
   return (
     <>
+      <div className="fixed top-0 left-0 right-0 z-50 flex flex-col">
+        {/* Bannière promo */}
+        <div className="bg-[var(--primary)] text-white text-center py-2.5 text-sm font-exo font-semibold tracking-wide leading-tight">
+          Offre de printemps&nbsp;: <strong className="font-extrabold">-10% sur toutes les Pergolas Bioclimatiques</strong> jusqu'au 17&nbsp;avril
+        </div>
+
       <header
         className={cn(
-          'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+          'transition-all duration-300',
           scrolled
             ? 'bg-white/92 backdrop-blur-lg shadow-[0_2px_20px_rgba(0,0,0,0.08)]'
             : 'bg-white/95'
@@ -47,7 +53,10 @@ export function Navigation() {
               src="https://lebmenuiserie.com/wp-content/uploads/2019/01/logo_LEB.png"
               alt="LEB Menuiserie"
               className="h-10 lg:h-12 w-auto object-contain"
+              width={160}
+              height={48}
               loading="eager"
+              decoding="async"
             />
           </Link>
 
@@ -86,6 +95,7 @@ export function Navigation() {
 
           {/* Burger mobile */}
           <button
+            type="button"
             className="lg:hidden p-2 text-[var(--foreground)]"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
@@ -95,6 +105,7 @@ export function Navigation() {
           </button>
         </div>
       </header>
+      </div>
 
       {/* Mobile overlay */}
       <div
@@ -122,8 +133,13 @@ export function Navigation() {
               src="https://lebmenuiserie.com/wp-content/uploads/2019/01/logo_LEB.png"
               alt="LEB Menuiserie"
               className="h-9 w-auto"
+              width={144}
+              height={36}
+              loading="eager"
+              decoding="async"
             />
             <button
+              type="button"
               onClick={() => setMenuOpen(false)}
               aria-label="Fermer le menu"
               className="p-1.5 text-[var(--foreground-muted)] hover:text-[var(--foreground)]"
