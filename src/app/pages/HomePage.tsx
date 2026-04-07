@@ -166,7 +166,7 @@ export default function HomePage() {
               haut-de-gamme, certifiés RGE Qualibat.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link to="/contact" className="btn-shimmer btn-primary text-base py-3.5 px-7 pulse-glow">
+              <Link to="/contact" className="btn-primary text-base py-3.5 px-7">
                 Demander un devis gratuit
                 <ChevronRight size={18} />
               </Link>
@@ -410,7 +410,7 @@ export default function HomePage() {
                     href={showroom.mapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-secondary mt-5 text-xs py-2 px-4"
+                    className="btn-secondary mt-5 py-2 px-5"
                   >
                     Voir sur la carte
                   </a>

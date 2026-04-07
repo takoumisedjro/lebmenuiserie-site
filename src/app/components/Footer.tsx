@@ -12,13 +12,13 @@ export function Footer() {
 
           {/* Logo + présentation */}
           <div className="lg:col-span-1">
-            <div className="inline-block bg-white rounded-lg px-4 py-2 mb-4">
+            <div className="inline-block bg-white rounded-md px-3 py-1.5 mb-5">
               <img
                 src="https://lebmenuiserie.com/wp-content/uploads/2019/01/logo_LEB.png"
                 alt="LEB Menuiserie"
-                className="h-10 w-auto object-contain"
-                width={160}
-                height={40}
+                className="h-9 w-auto object-contain"
+                width={144}
+                height={36}
                 loading="lazy"
                 decoding="async"
               />
@@ -33,9 +33,11 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LEB Menuiserie sur Facebook"
-                className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-[var(--primary)] transition-colors text-xs font-bold"
+                className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-[var(--primary)] transition-colors"
               >
-                f
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                </svg>
               </a>
               <a
                 href="https://www.instagram.com/lebmenuiserie"

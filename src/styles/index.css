@@ -75,6 +75,7 @@ p, li, span, a {
 
 @media (min-width: 1024px) {
   .container-custom { padding-inline: 3rem; }
+  :root { --header-total-height: 120px; }
 }
 
 .section-padding {

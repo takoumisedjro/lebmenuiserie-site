@@ -50,9 +50,9 @@
   --transition: 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
   --transition-slow: 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 
-  /* Layout */
+  /* Layout — mobile first (64px nav + 40px banner) */
   --navbar-height: 80px;
   --navbar-height-mobile: 64px;
   --banner-height: 40px;
-  --header-total-height: 120px;
+  --header-total-height: 104px;
 }

@@ -3,7 +3,7 @@ import { Phone, FileText } from 'lucide-react'
 
 export function MobileStickyBar() {
   return (
-    <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 pb-safe">
+    <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40" style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}>
       <div
         className="grid grid-cols-2 shadow-[0_-4px_20px_rgba(0,0,0,0.15)]"
         style={{

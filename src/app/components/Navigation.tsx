@@ -34,8 +34,10 @@ export function Navigation() {
     <>
       <div className="fixed top-0 left-0 right-0 z-50 flex flex-col">
         {/* Bannière promo */}
-        <div className="bg-[var(--primary)] text-white text-center py-2.5 text-sm font-exo font-semibold tracking-wide leading-tight">
-          Offre de printemps&nbsp;: <strong className="font-extrabold">-10% sur toutes les Pergolas Bioclimatiques</strong> jusqu'au 17&nbsp;avril
+        <div className="bg-[var(--primary)] text-white text-center py-2.5 text-sm font-exo font-semibold leading-none whitespace-nowrap overflow-hidden text-ellipsis px-4">
+          <span className="hidden sm:inline">Offre de printemps&nbsp;: </span>
+          <strong className="font-extrabold">-10% sur les Pergolas Bioclimatiques</strong>
+          <span className="hidden md:inline"> jusqu'au 17&nbsp;avril</span>
         </div>
 
       <header
@@ -61,13 +63,13 @@ export function Navigation() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-8" aria-label="Navigation principale">
+          <nav className="hidden lg:flex items-center gap-6" aria-label="Navigation principale">
             {links.map((link) => (
               <Link
                 key={link.to}
                 to={link.to}
                 className={cn(
-                  'nav-link-underline font-exo font-medium text-sm uppercase tracking-widest transition-colors duration-200',
+                  'nav-link-underline font-exo font-medium text-sm uppercase tracking-wide transition-colors duration-200',
                   pathname === link.to
                     ? 'text-[var(--primary)] active'
                     : 'text-[var(--foreground)] hover:text-[var(--primary)]'
