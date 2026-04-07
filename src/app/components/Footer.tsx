@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Phone, Mail, MapPin, Clock, Share2 } from 'lucide-react'
+import { Phone, Mail, MapPin, Clock } from 'lucide-react'
 
 export function Footer() {
   const year = new Date().getFullYear()
@@ -12,33 +12,35 @@ export function Footer() {
 
           {/* Logo + présentation */}
           <div className="lg:col-span-1">
-            <img
-              src="https://lebmenuiserie.com/wp-content/uploads/2019/01/logo_LEB.png"
-              alt="LEB Menuiserie"
-              className="h-12 w-auto mb-4 brightness-0 invert"
-            />
+            <div className="inline-block bg-white rounded-lg px-4 py-2 mb-4">
+              <img
+                src="https://lebmenuiserie.com/wp-content/uploads/2019/01/logo_LEB.png"
+                alt="LEB Menuiserie"
+                className="h-10 w-auto object-contain"
+              />
+            </div>
             <p className="text-sm text-white/70 leading-relaxed mb-6">
               Installateur Conseil depuis 1973. Imaginez votre projet de menuiserie
               intérieure et extérieure, nous vous aidons à le concrétiser.
             </p>
             <div className="flex gap-3">
               <a
-                href="https://www.facebook.com"
+                href="https://www.facebook.com/lebmenuiserie"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook LEB Menuiserie"
-                className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-[var(--primary)] transition-colors"
+                className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-[var(--primary)] transition-colors text-xs font-bold"
               >
-                <Share2 size={16} />
+                f
               </a>
               <a
-                href="https://www.instagram.com"
+                href="https://www.instagram.com/lebmenuiserie"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram LEB Menuiserie"
                 className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-[var(--primary)] transition-colors"
               >
-                <Share2 size={16} />
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
               </a>
             </div>
           </div>

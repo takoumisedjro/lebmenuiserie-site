@@ -44,7 +44,7 @@ export default function RecrutementPage() {
       <section className="section-padding bg-white">
         <div className="container-custom max-w-3xl">
           <ScrollReveal>
-            <div className="bg-[var(--background-alt)] border-l-4 border-[var(--primary)] rounded-xl p-8 shadow-[var(--shadow-sm)] mb-8">
+            <div className="bg-[var(--background-alt)] rounded-xl p-8 mb-8" style={{ boxShadow: 'inset 5px 0 0 #02aed6, 0 1px 3px rgba(0,0,0,0.08)' }}>
               <div className="flex flex-wrap items-start justify-between gap-4 mb-6">
                 <div>
                   <h2 className="font-display font-bold text-2xl text-[var(--foreground)]">

@@ -141,8 +141,8 @@ export default function HomePage() {
         </div>
 
         {/* Promo banner */}
-        <div className="absolute top-20 left-0 right-0 z-10 bg-[var(--primary)] text-white text-center py-2.5 text-sm font-exo font-semibold tracking-wide">
-          🌿 Offre de printemps : <strong>-10% sur toutes les Pergolas Bioclimatiques</strong> jusqu'au 17 avril
+        <div className="absolute top-16 lg:top-20 left-0 right-0 z-10 bg-[var(--primary)] text-white text-center py-2.5 text-sm font-exo font-semibold tracking-wide">
+          Offre de printemps&nbsp;: <strong className="font-extrabold">-10% sur toutes les Pergolas Bioclimatiques</strong> jusqu'au 17&nbsp;avril
         </div>
 
         {/* Content */}

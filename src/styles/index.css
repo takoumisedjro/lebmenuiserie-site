@@ -1,4 +1,12 @@
 @import 'tailwindcss';
+
+/* Tailwind v4 — font utilities */
+@theme {
+  --font-display: 'Raleway', sans-serif;
+  --font-exo: 'Exo', sans-serif;
+  --font-body: 'Lato', sans-serif;
+}
+
 @import './theme.css';
 @import './fonts.css';
 @import './animations.css';
@@ -21,6 +29,22 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  hyphens: none;
+  -webkit-hyphens: none;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  hyphens: none;
+  -webkit-hyphens: none;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+p, li, span, a {
+  hyphens: none;
+  -webkit-hyphens: none;
+  overflow-wrap: break-word;
 }
 
 /* Focus visible accessible */

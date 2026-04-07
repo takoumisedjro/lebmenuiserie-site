@@ -93,10 +93,10 @@ export default function MenuiserieIndustriellePage() {
                     <div className="w-9 h-9 rounded-lg bg-[var(--primary-light)] flex items-center justify-center text-[var(--primary)] mb-3">
                       {step.icon}
                     </div>
-                    <h3 className="font-display font-bold text-sm text-[var(--foreground)] mb-1.5">
+                    <h3 className="font-display font-bold text-base text-[var(--foreground)] mb-2">
                       {step.title}
                     </h3>
-                    <p className="text-xs text-[var(--foreground-muted)] leading-relaxed">
+                    <p className="text-sm text-[var(--foreground-muted)] leading-relaxed">
                       {step.desc}
                     </p>
                   </div>
